@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="saurabh kumar sharma">
+    <meta name="description" content="This page contains all the thing I am learning how to create as I learn HTML.">
+    <link rel="icon" href="frog.jpg" type="image/x-icon">
     <title class="tittle-kaveri"> Kaveri jet engine</title>
     <style>
       .size-frog{
@@ -14,12 +18,17 @@
       .info-kaveri{
         font-family:Arial;
         font-weight:300;
+        font-size: 18px;
         margin-top:0px;
-        width:300px;
-        line-height: 22px;
+        width:340px;
+        height:400px;
+        line-height: 30px;
+        display:inline-block;
       }
       .kaveri-photo{
-        margin-left:200px ;
+        margin-left:2px ;
+        display:inline-block;
+        border-radius: 8px;
       }
       .Search-bar{
         font-size: 24px;
@@ -29,33 +38,117 @@
       }
       .heading{
         margin-top: 0px;
+        
       }
       .top-heading{
         margin-bottom: 2px;
+        display:inline-block;
+      }
+      .photo-kaveri{
+        display:inline-block;
+      }
+      .text-title{
+        font-family:Arial;
+      }
+      .main-video{
+        vertical-align:top;
       }
     </style>
   </head>
   <body>
-    <div class = "top-heading"; style="display:flex; align-items:center;">
-      
-      <input class="Search-bar" type="text" placeholder="Search"> 
-         <img class="size-frog" src="frog.jpg">
-        </div>
-        <h1 class="heading">
+    <div class="main-video">
+
+      <div class = "top-heading"; style="display:inline-flex;">
+        
+        <input class="Search-bar" type="text" placeholder="Search"> 
+        <img class="size-frog" src="frog.jpg">
+      </div>
+      <h1 class="heading">
         THE TECHKNOWLOGY NEED IN KAVERI ENGINE
       </h1>
-    <div style="text-align: justify;">
+      <div style="text-align: justify; display:inline-flex;">
+        
+        <p class="info-kaveri" >
+          The Kaveri engine,developed by India's Gas Turbine Research
+          Establishment (GTRE) within the defence Research and Development
+          Organisation(DRDO),is undergoing trials at the Gromov Flight Research
+          Institute (GFRI) in Russia, marking a significant advancement in the country's aerospace capabilities. The Defence Research and Development
+          Organisation (DRDO)is conducting detailed trials with approximately 25 hours of testing remaining,while simultaneously
+          preparing for extensive 70-hour flight trials on a Russian Ilyuhin Il-76 test bed aircraft.
+        </p>
+        <img class="kaveri-photo"src="kaveri.jpeg">
+      </div>
+      <p>
 
-      <p class="info-kaveri">
-        The Kaveri engine,developed b India's Gas Turbine Reasearch
-       Establishment (GTRE) within the defence Research and Development
-        Organisation(DRDO),is undergoing trials at the Gromov Flight Reasearch 
-        Institute (GFRI) in Russia, marking a significant advancement in the country's aerospace capabilities. The Defence Research and Development
-        Organisation (DRDO)is conducting detailed trials with approximately 25 hours of testing remaining,while simultaneously
-        preparing for extensive 70-hour flight trials on a Russian Ilyuhin Il-76 test bed aircraft.
       </p>
-      <img class="kaveri-photo"src="kaveri.jpeg">
     </div>
+      <P class="text-title">
+        JOIN MY SOCIAL MEDIA!   
+    </P>
+    <a
+    href="https://www.youtube.com/@Saurabhbaazi2" target="_blank">
+    <button class="subscribe-button">
+      SUBSCRIBE
+    </button>
+  </a>
+  <a href="https://discord.gg/BdWmwgsG" target="_blank">
+    <button class="join-button">
+      DISCORD
+    </button>
+  </a>
+  
+  <style> 
+    .subscribe-button {
+      background-color: rgb(250, 2, 2);
+      color: white;
+      border-color: 1px solid rgba(0, 0, 0, 0.971);
+      padding-right: 14px;
+      padding-left: 14px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      display: inline-block;
+      border-radius: 12px;
+      margin-right: 12px;
+      border-radius: 4px;
+      vertical-align: middle;
+      cursor: pointer;
+      
+    }
+    .join-button{
+      background-color: rgb(244, 147, 132);
+      border-color: rgb(8, 2, 59);
+      display:inline-block;
+      border-style: solid;
+      border-width: 2px;
+      padding-right: 2px;
+      
+      height: 35px;
+      width: 100px;
+      font-size: 16px;
+      border-radius: 14px;
+      margin-left: 12px;
+      cursor: pointer;
+      vertical-align: middle;
+      color: rgb(248, 248, 248)
+      
+    }
+    .subscribe-button:hover{
+      background-color: blue;
+      opacity: 0.5;
+      transition: opacity 1ms,
+      background-color 1s;
+      
+      
+    }
+    .join-button:hover{
+      background-color:rgb(55, 0, 255);
+      opacity: 0.7;
+      transition: opacity 1ms,
+      background-color 1s;
+    }
+    
+    </style>
+
 
   </body>
 </html>
