@@ -1,0 +1,6 @@
+body{
+  background-image:linear-gradient(to right, rgb(192, 46, 46) 66%, rgb(68, 68, 124))
+}
+h1{
+  text-shadow: 3px 3px 2px blue, 4px 4px 2px rgb(255, 0, 234);
+}
