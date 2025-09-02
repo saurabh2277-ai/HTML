@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta charset="UTH-8">
+    <meta name="Author" content="Saurabh sharma">
+    <meta name="content" content="I am learning">
+    <link rel="icon" href="photos/gif rocket.gif">
+    <style>
+      ol{
+        list-style-type: square;
+        text-align: justify;
+        list-style-position: inside;
+        line-height: 1.5;
+        /* list-style-image:url("photos/gif\ rocket.gif"); */
+        /* list-style: square url("photos/gif\ rocket.gif"); */
+      }
+      ul{
+        list-style-position: inside;
+      }
+      ul:nth-child(odd){
+
+        list-style-position: inside;
+        color: purple;
+      }
+      ul ::marker{
+        color:blue;
+        font-size: 1em;
+        content:"only $5>>"
+      }
+    </style>
+  </head>
+<body>
+  <header>
+    <h1>CSS list</h1>
+  </header>
+  <article>
+    <h2>Odered list</h2>
+    <ol start="10" reversed>
+      <li>how are you</li>
+      <li>Nice to meet you</li>
+      <li>I am fine </li>
+      <li>What are you doing </li>
+    </ol>
+  </article>
+  <article>
+    <h2>Unodered lists</h2>
+    <ul>
+       <li>how are you</li>
+      <li>Nice to meet you</li>
+      <li>I am fine </li>
+      <li>What are you doing </li>
+    </ul>
+  </article>
+</body>
+</html>
