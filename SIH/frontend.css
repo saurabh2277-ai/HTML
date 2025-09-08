@@ -1,0 +1,28 @@
+ *{
+      margin: 0;
+      padding:0;
+      box-sizing: border-box;
+    }
+  .header1{
+        font-size:4rem;
+      height: 90px;
+     font-family:sans-serif;
+    
+
+    
+      background-color: rgb(241, 146, 68);
+    
+  }
+  h1{
+    font-size: 4rem;
+    position: fixed;
+    left: 108px;
+    top:4px;
+    color: #333;
+  }
+
+.imgashok{
+      
+      float:left;
+      position: fixed;
+    }

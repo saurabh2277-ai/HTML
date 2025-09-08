@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTH-8">
+    <meta name="Author" content="Saurabh sharma">
+    <meta name="content" content="I am learning">
+    <link rel="icon" href="photos/gif rocket.gif">
+    <style>
+      *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        font-size: 1.5rem;
+      }
+      .outer-container{
+        border: 2px dashed #333;
+        width: 40rem;
+        height: 60rem;
+        
+        margin: 4rem auto;
+        position: relative;
+      }
+      .inner-container{
+        border: 2px solid #333;
+        width: 30rem;
+        height: 40rem;
+        
+        margin: 11rem auto;
+        
+        
+       
+      }
+      .box{
+        width: 130px;
+        height: 140px;
+        color: #fff;
+        padding: 1rem;
+        
+      }
+      .absolute{
+        background-color: blue;
+        position: absolute;
+        top: 10px;
+        left: 12px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="outer-container">
+      <div class="inner-container">
+        <div class="box absolute">
+          <p >Absolute</p>
+        </div>
+        
+      
+      <div class="box relative">
+        <p>Relative</p>
+
+      </div>
+      <div class="box fixed">
+        <p>fixed</p>
+      </div>
+      <div class="box sticky">
+        <p>
+          sticky
+        </p>
+      </div>
+      </div>
+    
+    </div>
+  </body>
+</html>
