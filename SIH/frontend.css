@@ -7,22 +7,168 @@
         font-size:4rem;
       height: 90px;
      font-family:sans-serif;
+     background-color: rgb(236, 174, 123);
     
-
-    
-      background-color: rgb(241, 146, 68);
+      
+      min-height: 80px;
+      font-size: 23px;
+      color: #333;
+      
+      
     
   }
   h1{
     font-size: 4rem;
-    position: fixed;
+    position: absolute;
     left: 108px;
     top:4px;
     color: #333;
   }
+  .imgashok{
+    display: block;
+  }
 
-.imgashok{
+.header1 img{
       
+      width:4.5rem;
+      height: auto;
       float:left;
-      position: fixed;
+      
+      min-width: 3rem;
     }
+
+    .container{
+      
+      display: flex;
+      justify-content:center;
+      flex-direction: row;
+     
+      gap:1rem;
+    }
+    button{
+      background-color:  rgb(236, 174, 123);
+      width: 7.2rem;
+      font-size: 1.3rem;
+      height: 5.6rem;
+      border-left:2px solid rgb(236, 174, 123);
+      border-right:2px solid rgb(236, 174, 123);
+     
+      border-bottom-color: rgb(236, 174, 123);
+      flex-flow:row wrap;
+      flex-shrink: 1;
+      right: 140px;
+  
+      cursor:pointer;
+      
+    }
+    .d{
+      background-image: radial-gradient( rgb(236, 174, 123), rgb(236, 174, 123));
+      margin-right: 4px;
+      transition: background-image 1s;
+
+    }
+    .d:hover{
+      background-image:radial-gradient(rgb(241, 146, 20));
+      opacity: 0.6;
+      color:rgb(79, 97, 115);
+      transition: background-image 1s, 
+      opacity 1ms, color 10ms;
+      
+      
+    }
+    body{
+    margin:0;
+    padding: 0;
+    background-color: aliceblue;
+    
+    
+  }
+  main{
+    display: flex;
+    flex-direction: row;
+    gap:4rem;
+    
+  }
+  .main_container{
+    margin: 14% 0 0 30%;
+    position: relative;
+    width: 25%;
+    
+  }
+  .image{
+    display: block;
+    width: 90%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 4px;
+   
+  }
+  
+
+  
+  .overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Roboto',sans-serif;
+    width: 90%;
+    height: 0;
+    transition: .5s ease-in-out;
+    
+    border-radius: 8px;
+  }
+  .main_container:hover .overlay
+  {
+    height: 100%;
+    cursor: pointer;
+  }
+  .h12{
+    width: 100%;
+    margin-top: 10%;
+    color: white;
+    font-size: 3vw;
+    position: absolute;
+    text-align: center;
+    font-family:'Damion', cursive;
+    transform: rotate(-5deg)skewX(-0deg);
+  }
+  h2{
+    text-align: center;
+    font-family: 'Roboto',sans-serif;
+    color: wheat ;
+    font-size: 1.2vw;
+    margin: 30% 0 0 18%;
+    width: 70%;
+    letter-spacing: 4px;
+  }
+  .image_teacher{
+    margin-top: 18%;
+    width: 21vw;
+    height: 21vw;
+  }
+  .main_container2{
+    display: flex;
+    margin: 10% 0 0 0;
+    
+    
+  }
+  .main1{
+    position:absolute;
+    top: 30%;
+    left: 5%;
+    
+  }
+  .h1_text1{
+    display: flex;
+    flex-direction: column;
+    margin: 2% 0 0 5%;
+    gap:2rem;
+    font-family: 'Roboto',sans-serif;
+    font-size: 4vw;
+    color: #333;
+    text-emphasis:bold;
+  }

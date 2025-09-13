@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .section{
+      min-height: 80px;
+      font-size: 23px;
+      color: #333;
+      background-color: rgb(228, 240, 179);
+      
+    }
+    .container{
+      display: flex;
+      justify-content:end;
+      flex-direction: row;
+      gap:1rem;
+    }
+    button{
+      
+      width: 4.2rem;
+      font-size: 1rem;
+      height: 3.6rem;
+      border:2px solid #737171;
+      border-radius: 4rem;
+      position: static;
+      margin-top: 9px;
+  
+      cursor:pointer;
+      
+    }
+    .d{
+      background-image:url("\00A9");
+      margin-right: 4px;
+      transition: background-color 1s;
+    }
+    .d:hover{
+      background-color: aqua;
+      opacity: 0.7;
+      transition: background-color 1s, 
+      opacity 1ms;
+      
+      
+    }
+  </style>
+</head>
+<body>
+  <section class="section container">
+    <button class="d">a</button>
+    <button class="d">b</button>
+    <button class="d">c</button>
+    <button class="d">d</button>
+
+  </section>
+  
+</body>
+</html>
