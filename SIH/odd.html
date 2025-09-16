@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National School Structure Standardization Initiative</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header with Ashoka Emblem */
+        .top-header {
+            background: linear-gradient(135deg, #ff9933 0%, #ffffff 50%, #138808 100%);
+            height: 4px;
+        }
+
+        .emblem-header {
+            background: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .emblem-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            gap: 20px;
+        }
+
+        .ashoka-emblem {
+            width: 60px;
+            height: 60px;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMzA4NyIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iMjAiIGZpbGw9IiMwMDMwODciLz4KICA8cGF0aCBkPSJNNTAgMTBsMTAgMzBoLTIweiIgZmlsbD0iIzAwMzA4NyIvPgogIDxwYXRoIGQ9Ik01MCA5MGwtMTAtMzBoMjB6IiBmaWxsPSIjMDAzMDg3Ii8+CiAgPHBhdGggZD0iTTEwIDUwaDMwbC0xMCAxMHoiIGZpbGw9IiMwMDMwODciLz4KICA8cGF0aCBkPSJNOTAgNTBoLTMwbDEwLTEweiIgZmlsbD0iIzAwMzA4NyIvPgo8L3N2Zz4=') center/contain no-repeat;
+        }
+
+        .ministry-title {
+            flex: 1;
+        }
+
+        .ministry-title h1 {
+            font-size: 1.1rem;
+            color: #003087;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .ministry-title h2 {
+            font-size: 1.8rem;
+            color: #003087;
+            font-weight: 700;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #003087 0%, #0056b3 100%);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 18px 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 15px;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: #ff9933;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .nav-link:hover::after {
+            width: 80%;
+        }
+
+        /* Hero Section with Students Background */
+        .hero-section {
+            position: relative;
+            min-height: 500px;
+            background: linear-gradient(rgba(0,48,135,0.85), rgba(0,48,135,0.85)),
+                        url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI2MDAiIHZpZXdCb3g9IjAgMCAxNjAwIDYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxwYXR0ZXJuIGlkPSJzdHVkZW50cyIgeD0iMCIgeT0iMCIgd2lkdGg9IjQwMCIgaGVpZ2h0PSIzMDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8cmVjdCBmaWxsPSIjZTBlNGVkIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIvPgogICAgICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIyMCIgZmlsbD0iIzMzMyIgb3BhY2l0eT0iMC4xIi8+CiAgICAgIDxjaXJjbGUgY3g9IjEyMCIgY3k9IjgwIiByPSIyMCIgZmlsbD0iIzMzMyIgb3BhY2l0eT0iMC4xIi8+CiAgICAgIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjYwIiByPSIyMCIgZmlsbD0iIzMzMyIgb3BhY2l0eT0iMC4xIi8+CiAgICAgIDxyZWN0IHg9IjQwIiB5PSI4MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjMzMzIiBvcGFjaXR5PSIwLjEiLz4KICAgICAgPHJlY3QgeD0iMTEwIiB5PSIxMTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzMzMyIgb3BhY2l0eT0iMC4xIi8+CiAgICAgIDxyZWN0IHg9IjE5MCIgeT0iOTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzMzMyIgb3BhY2l0eT0iMC4xIi8+CiAgICA8L3BhdHRlcm4+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjc3R1ZGVudHMpIi8+Cjwvc3ZnPg==') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #ff9933;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Key Stats */
+        .stats-section {
+            background: white;
+            padding: 40px 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #003087;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 40px;
+        }
+
+        /* Initiative Cards */
+        .initiative-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-left: 5px solid #003087;
+        }
+
+        .initiative-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .initiative-card h3 {
+            color: #003087;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            background: #ff9933;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 80px;
+            height: fit-content;
+        }
+
+        .sidebar-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-card h4 {
+            color: #003087;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ff9933;
+        }
+
+        .quick-link {
+            display: block;
+            padding: 10px 15px;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .quick-link:hover {
+            background: #f0f4ff;
+            color: #003087;
+            transform: translateX(5px);
+        }
+
+        /* Footer */
+        footer {
+            background: #003087;
+            color: white;
+            padding: 40px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 15px;
+            color: #ff9933;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .nav-list {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .nav-link {
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Tricolor Strip -->
+    <div class="top-header"></div>
+    
+    <!-- Emblem Header -->
+    <div class="emblem-header">
+        <div class="emblem-container">
+            <div class="ashoka-emblem"></div>
+            <div class="ministry-title">
+                <h1>Government of India</h1>
+                <h2>National School Structure Standardization Initiative</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About Initiative</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Implementation</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Dashboard</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Reports</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <!-- <div class="hero-badge">HACKATHON 2025</div> -->
+            <h1 class="hero-title">Standardizing Odd School Structures</h1>
+            <p class="hero-subtitle">Improving Educational Policy Implementation and Resource Allocation Across India</p>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">1.5M+</div>
+                <div class="stat-label">Schools Covered</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">250M</div>
+                <div class="stat-label">Students Benefited</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">28</div>
+                <div class="stat-label">States Participating</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">₹5000Cr</div>
+                <div class="stat-label">Resources Optimized</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="content-area">
+            <div class="initiative-card">
+                <h3><span class="icon">1</span> Unified Structure Framework</h3>
+                <p>Establishing a standardized framework for school infrastructure across all states, ensuring consistency in educational delivery while respecting regional diversity. This initiative aims to bridge the gap between urban and rural educational facilities.</p>
+            </div>
+
+            <div class="initiative-card">
+                <h3><span class="icon">2</span> Resource Optimization</h3>
+                <p>Implementing AI-driven resource allocation systems to ensure equitable distribution of educational materials, teaching staff, and infrastructure development funds based on real-time data analytics and predictive modeling.</p>
+            </div>
+
+            <div class="initiative-card">
+                <h3><span class="icon">3</span> Policy Implementation</h3>
+                <p>Creating a unified digital platform for seamless policy implementation, monitoring, and feedback collection from all stakeholders including teachers, students, parents, and administrators.</p>
+            </div>
+
+            <div class="initiative-card">
+                <h3><span class="icon">4</span> Quality Assurance</h3>
+                <p>Developing comprehensive quality metrics and regular assessment protocols to ensure standardized education quality across diverse school structures, with focus on learning outcomes rather than infrastructure alone.</p>
+            </div>
+
+            <div class="initiative-card">
+                <h3><span class="icon">5</span> Teacher Training</h3>
+                <p>Launching nationwide capacity building programs for educators to adapt to standardized frameworks while maintaining pedagogical flexibility and innovation in classroom delivery.</p>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h4>Quick Links</h4>
+                <a href="#" class="quick-link">📊 Live Dashboard</a>
+                <a href="#" class="quick-link">📄 Policy Documents</a>
+                <a href="#" class="quick-link">💼 Resource Portal</a>
+                <a href="#" class="quick-link">📱 Mobile App</a>
+                <a href="#" class="quick-link">📧 Newsletter</a>
+            </div>
+
+            <div class="sidebar-card">
+                <h4>Latest Updates</h4>
+                <p style="font-size: 14px; line-height: 1.6;">
+                    <strong>15 Sept 2025:</strong> Phase 2 implementation begins in 8 new states<br><br>
+                    <strong>10 Sept 2025:</strong> Resource allocation algorithm v2.0 deployed<br><br>
+                    <strong>5 Sept 2025:</strong> 10,000 schools successfully standardized
+                </p>
+            </div>
+
+            <div class="sidebar-card">
+                <h4>Contact Support</h4>
+                <p style="font-size: 14px;">
+                    📞 Toll Free: 1800-111-2025<br>
+                    📧 support@nssi.gov.in<br>
+                    🕒 Mon-Fri: 9 AM - 6 PM
+                </p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About NSSI</h4>
+                <p>The National School Structure Standardization Initiative is a flagship program aimed at revolutionizing India's educational infrastructure.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Important Links</h4>
+                <p>Ministry of Education<br>
+                NCERT<br>
+                State Education Boards<br>
+                RTI Portal</p>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <p>Guidelines<br>
+                Best Practices<br>
+                Case Studies<br>
+                Research Papers</p>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <p>Twitter: @NSSI_India<br>
+                Facebook: /NSSIIndia<br>
+                LinkedIn: NSSI-India<br>
+                YouTube: NSSI Official</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 National School Structure Standardization Initiative | Government of India | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
