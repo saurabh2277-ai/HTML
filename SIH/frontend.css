@@ -171,4 +171,12 @@
     font-size: 4vw;
     color: #333;
     text-emphasis:bold;
+    text-transform: uppercase;
+  }
+  .H1{
+    display: block;
+    background-color: antiquewhite;
+  }
+  .shikha{ 
+    font-size: 5vw;
   }
